@@ -1,21 +1,24 @@
-num1 = int(input('first number'))
-operator = int(input('+,-,/,*'))
-num2 = int(input('second number'))
+def calculate():
 
-result = 0
+    num1 = int(input('first number'))
+    operator = input('+,-,/,*')
+    num2 = int(input('second number'))
 
-try:
-    match operator:
-        case '+':
-            result = num1 + num2
-        case '-':
-            result = num1 + num2
-        case '/':
-            result = num1 + num2
-        case '*':
-            result = num1 + num2
-        case _:
-            raise Exception
-except:
-    print('something is wrong')
+    result = 0
 
+    try:
+        match operator:
+            case '+':
+                result = num1 + num2
+            case '-':
+                result = num1 - num2
+            case '/':
+                result = num1 / num2
+            case '*':
+                result = num1 * num2
+    except:
+        print('something is wrong')
+    
+    return result
+
+print(calculate())
